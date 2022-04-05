@@ -16,6 +16,7 @@
 
 .custom-gated-topic-content {
   text-align: center;
+  padding: 0 1rem;
 
   &--header {
     font-size: var(--font-up-5);
@@ -43,7 +44,7 @@
   .topic-navigation {
     visibility: hidden;
   }
-  
+
   .post-stream {
     max-height: 150vh;
     overflow: hidden;
