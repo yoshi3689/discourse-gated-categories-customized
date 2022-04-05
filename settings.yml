@@ -1,0 +1,13 @@
+enabled_categories:
+  type: list
+  list_type: category
+  default: ""
+  description: "Choose which categories that users need to sign up"
+prompt_heading:
+  type: string
+  default: "Sign up to read the rest of the post"
+  description: ""
+prompt_cta_label:
+  type: string
+  default: "Sign Up"
+  description: ""
