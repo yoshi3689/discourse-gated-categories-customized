@@ -1,8 +1,10 @@
 import Component from "@ember/component";
-import I18n from "I18n";
 import discourseComputed from "discourse-common/utils/decorators";
-import { default as getURL } from "discourse-common/lib/get-url";
-// import cookie from "discourse/lib/cookie";
+
+const enabledCategories = settings.enabled_categories
+  .split("|")
+  .map((id) => parseInt(id, 10))
+  .filter((id) => id);
 
 export default Component.extend({
   tagName: "",
@@ -10,32 +12,39 @@ export default Component.extend({
 
   didInsertElement() {
     this._super(...arguments);
-    this.appEvents.on("cta:shown", this, this._triggerPrompt);
+    this.recalculate();
+  },
+
+  didUpdateAttrs() {
+    this._super(...arguments);
+    this.recalculate();
   },
 
   willDestroyElement() {
-    this.appEvents.off("cta:shown", this, this._triggerPrompt);
+    document.body.classList.remove("topic-in-gated-category");
   },
 
-  _triggerPrompt() {
-    this.set("hidden", false)
+  recalculate() {
+    // do nothing if:
+    // a) topic does not have a category
+    // b) component setting is empty
+    // c) user is logged in
+    if (
+      !this.categoryId ||
+      enabledCategories.length === 0 ||
+      this.currentUser
+    ) {
+      return;
+    }
+
+    if (enabledCategories.includes(this.categoryId)) {
+      document.body.classList.add("topic-in-gated-category");
+      this.set("hidden", false);
+    }
   },
 
   @discourseComputed("hidden")
   shouldShow(hidden) {
     return !hidden;
   },
-
-  // @action
-  // dismissBanner() {
-  //   this.keyValueStore.setItem("anon-cta-never", "t");
-  //   this.session.set("showSignupCta", false);
-  //   this.set("hidden", true);
-  // },
-
-  // @action
-  // showBannerLater() {
-  //   this.keyValueStore.setItem("anon-cta-hidden", Date.now());
-  //   this.set("hidden", true)
-  // },
 });

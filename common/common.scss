@@ -1,4 +1,22 @@
 .custom-need-access-prompt {
-  background: red;
+  background: var(--tertiary-low);
   display: block;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  z-index: 999;
+}
+
+.topic-in-gated-category {
+  .topic-navigation {
+    visibility: hidden;
+  }
+
+  .post-stream {
+    max-height: 150vh;
+    overflow: hidden;
+  }
 }

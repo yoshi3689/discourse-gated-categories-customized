@@ -1,6 +1,6 @@
-{{!-- {{#if shouldShow}} --}}
+{{#if shouldShow}}
   <div class="custom-need-access-prompt">
-    <h1>{{theme-setting "prompt_heading"}}</h1>  
+    <h1>{{theme-setting "prompt_heading"}}</h1>
     {{d-button action=(route-action "showCreateAccount") class="btn-primary sign-up-button" translatedLabel=(theme-setting "prompt_cta_label")}}
   </div>
-{{!-- {{/if}} --}}
+{{/if}}
