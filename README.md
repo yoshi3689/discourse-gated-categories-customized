@@ -1,1 +1,1 @@
-# discourse-gated-category
+# discourse-gated-topics-in-category
