@@ -1,20 +1,49 @@
-.custom-need-access-prompt {
+.custom-gated-topic-container {
   background: var(--tertiary-low);
-  display: block;
+  border-top: 5px solid var(--tertiary);
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2em;
   z-index: 999;
+  min-height: 65%;
+
+  // align content in the middle
+  display: grid;
+  place-items: center;
+}
+
+.custom-gated-topic-content {
+  text-align: center;
+
+  &--header {
+    font-size: var(--font-up-5);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  &--text {
+    font-size: var(--font-up-2);
+  }
+
+  &--cta {
+    margin-top: 2rem;
+    
+    &__signup {
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .topic-in-gated-category {
+  overflow-y: hidden;
+  height: 100%;
+
   .topic-navigation {
     visibility: hidden;
   }
-
+  
   .post-stream {
     max-height: 150vh;
     overflow: hidden;
