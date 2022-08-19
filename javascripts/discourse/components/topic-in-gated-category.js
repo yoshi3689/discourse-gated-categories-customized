@@ -25,8 +25,7 @@ export default Component.extend({
   },
 
   recalculate() {
-    console.log(this);
-    console.log("user for gated category", this.currentUser);
+    console.log(this.site.categoriesById[this.categoryId]);
     // do nothing if:
     // a) topic does not have a category
     // b) component setting is empty
@@ -34,6 +33,7 @@ export default Component.extend({
     if (
       !this.categoryId ||
       enabledCategories.length === 0 ||(this.currentUser && 
+        ///this is where the user gourp is hard coded
       this.currentUser.groups.any(g => g.name === "Member_Directory"))
     ) {
       return;
