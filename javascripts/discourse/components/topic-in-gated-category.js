@@ -33,8 +33,8 @@ export default Component.extend({
     // c) user is logged in
     if (
       !this.categoryId ||
-      enabledCategories.length === 0 ||
-      this.currentUser.groups.any(g => g.name === "Member_Directory")
+      enabledCategories.length === 0 ||(this.currentUser && 
+      this.currentUser.groups.any(g => g.name === "Member_Directory"))
     ) {
       return;
     }
