@@ -35,14 +35,20 @@ export default Component.extend({
       enabledCategories.length === 0 ||(this.currentUser && 
         ///this is where the user gourp is hard coded
       this.currentUser.groups.any(g => g.name === "Member_Directory"))
-    ) {
+    ) { console.log("do nothing");
       return;
     }
 
-    if (enabledCategories.includes(this.categoryId)) {
+    else {
+      console.log("hide the post")
       document.body.classList.add("topic-in-gated-category");
       this.set("hidden", false);
     }
+    // if (enabledCategories.includes(this.categoryId)) {
+    //   console.log("hide the post")
+    //   document.body.classList.add("topic-in-gated-category");
+    //   this.set("hidden", false);
+    // }
   },
 
   @discourseComputed("hidden")
