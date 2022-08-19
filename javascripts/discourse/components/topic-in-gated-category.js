@@ -25,6 +25,7 @@ export default Component.extend({
   },
 
   recalculate() {
+    console.log(this);
     // do nothing if:
     // a) topic does not have a category
     // b) component setting is empty
