@@ -34,7 +34,7 @@ export default Component.extend({
     if (
       !this.categoryId ||
       enabledCategories.length === 0 ||
-      this.currentUser
+      this.currentUser.groups.any(g => g.name === "Member_Directory")
     ) {
       return;
     }
