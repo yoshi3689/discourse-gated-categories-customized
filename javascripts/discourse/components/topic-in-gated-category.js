@@ -29,7 +29,7 @@ export default Component.extend({
     // do nothing if:
     // a) topic does not have a category
     // b) component setting is empty
-    // c) user is logged in
+    // c) user is logged in and belongs to that group 
     if (
       !this.categoryId ||
       enabledCategories.length === 0 ||(this.currentUser && 
@@ -39,16 +39,16 @@ export default Component.extend({
       return;
     }
 
-    else {
-      console.log("hide the post")
-      document.body.classList.add("topic-in-gated-category");
-      this.set("hidden", false);
-    }
-    // if (enabledCategories.includes(this.categoryId)) {
+    // if (!this.currentUser || !this.currentUser.groups.any(g => g.name === "Member_Directory")) {
     //   console.log("hide the post")
     //   document.body.classList.add("topic-in-gated-category");
     //   this.set("hidden", false);
     // }
+    else if (enabledCategories.includes(this.categoryId)) {
+      console.log("hide the post")
+      document.body.classList.add("topic-in-gated-category");
+      this.set("hidden", false);
+    }
   },
 
   @discourseComputed("hidden")
