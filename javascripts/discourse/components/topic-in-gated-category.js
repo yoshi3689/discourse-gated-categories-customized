@@ -39,11 +39,7 @@ export default Component.extend({
       return;
     }
 
-    // if (!this.currentUser || !this.currentUser.groups.any(g => g.name === "Member_Directory")) {
-    //   console.log("hide the post")
-    //   document.body.classList.add("topic-in-gated-category");
-    //   this.set("hidden", false);
-    // }
+   
     else if (enabledCategories.includes(this.categoryId)) {
       console.log("hide the post")
       document.body.classList.add("topic-in-gated-category");
