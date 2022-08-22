@@ -3,7 +3,7 @@ import {
 } from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
-  if (window.location.pathname.includes('/t/')) {
+  if (window.location.pathname.includes('/t/') && document.querySelector(".with-gated-category")) {
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#topic-title").scrollIntoView();
     })
