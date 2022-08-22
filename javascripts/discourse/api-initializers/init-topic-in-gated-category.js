@@ -9,7 +9,7 @@ export default apiInitializer("0.8", (api) => {
     })
     window.addEventListener("resize", () => {
       if (document.querySelector(".topic-in-gated-category"))
-      document.querySelector(".fancy-title").scrollIntoView();
+      document.querySelector(".fancy-title").scrollIntoView().scroll(-50);
     })
   }
   api.onPageChange(() => {
