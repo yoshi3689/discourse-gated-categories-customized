@@ -5,11 +5,11 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
-      document.querySelector("#topic-title").scrollIntoView();
+      document.querySelector(".fancy-title").scrollIntoView();
     })
     window.addEventListener("resize", () => {
       if (document.querySelector(".topic-in-gated-category"))
-      document.querySelector("#topic-title").scrollIntoView();
+      document.querySelector(".fancy-title").scrollIntoView();
     })
   }
   api.onPageChange(() => {
