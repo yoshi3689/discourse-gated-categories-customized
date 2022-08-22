@@ -8,9 +8,9 @@ export default apiInitializer("0.8", (api) => {
       let element = document.querySelector('#main-outlet');
       element.scrollIntoView();
       window.scrollBy(0, -100);
-      let styleSheet = document.createElement("style");
-      styleSheet.innerHTML = ".topic-in-gated-category {overflow-y: hidden; }"
-      document.body.appendChild(styleSheet);
+      // let styleSheet = document.createElement("style");
+      // styleSheet.innerHTML = ".topic-in-gated-category { }"
+      // document.body.appendChild(styleSheet);
     })
   }
   api.onPageChange(() => {
