@@ -10,7 +10,7 @@ export default apiInitializer("0.8", (api) => {
       window.scrollBy(0, -100);
       let styleSheet = document.createElement("style");
       styleSheet.innerHTML = ".topic-in-gated-category {overflow-y: hidden; }"
-
+      document.body.appendChild(styleSheet);
     })
   }
   api.onPageChange(() => {
