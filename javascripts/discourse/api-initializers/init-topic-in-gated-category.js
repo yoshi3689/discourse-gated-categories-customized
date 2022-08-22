@@ -5,7 +5,7 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
-      let element = document.getElementById('#main-outlet');
+      let element = document.querySelector('#main-outlet');
       let headerOffset = 100;
     let elementPosition = element.getBoundingClientRect().top;
     let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
