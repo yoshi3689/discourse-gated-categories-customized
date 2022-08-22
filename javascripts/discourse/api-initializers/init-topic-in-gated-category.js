@@ -4,13 +4,12 @@ import {
 
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
+    let elementArray = document.querySelectorAll('.below-site-header-outlet');
     document.addEventListener("DOMContentLoaded", () => {
-      let elementArray = document.querySelectorAll('.below-site-header-outlet');
       elementArray[elementArray.length - 1].scrollIntoView();
-      // window.scrollBy(0, -100);
-      // let styleSheet = document.createElement("style");
-      // styleSheet.innerHTML = ".topic-in-gated-category { }"
-      // document.body.appendChild(styleSheet);
+    })
+    window.addEventListener("resize", () => {
+      elementArray[elementArray.length - 1].scrollIntoView();
     })
   }
   api.onPageChange(() => {
