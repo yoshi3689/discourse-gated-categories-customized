@@ -3,11 +3,13 @@ import {
 } from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
-  if (window.location.pathname.includes('/t/') && document.querySelector(".with-gated-category")) {
+  if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
+      if (document.querySelector(".topic-in-gated-category"))
       document.querySelector("#topic-title").scrollIntoView();
     })
     window.addEventListener("resize", () => {
+      if (document.querySelector(".topic-in-gated-category"))
       document.querySelector("#topic-title").scrollIntoView();
     })
   }
