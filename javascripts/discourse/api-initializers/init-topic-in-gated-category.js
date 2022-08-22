@@ -4,7 +4,7 @@ import {
 
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("load", () => {
       if (document.querySelector(".topic-in-gated-category"))
       document.querySelector("#topic-title").scrollIntoView();
     })
