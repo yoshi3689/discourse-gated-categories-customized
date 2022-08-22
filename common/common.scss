@@ -12,8 +12,8 @@
       overflow: hidden;
     }
   
+    // hides the content of the topic except the first line
     .container.posts::before {
-      // ensure to cover most of the content when zoomed out
       content: "";
       position: absolute;
       bottom: 0;
@@ -51,6 +51,7 @@
         }
       }
     }
+    // the cover spanning from the bottom of the screen
       .custom-gated-topic-container {
         background: var(--tertiary-low);
         border-top: 5px solid var(--tertiary);
@@ -62,22 +63,6 @@
         z-index: 999;
         min-height: 72.5%;
       }
-      
-      // .gate-subscribe-for-member{
-      //   display: block;
-      //   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-      //   border-radius: 4px !important;
-      //   font-weight: 700;
-      //   margin-left: 7px;
-      //   padding: 6px 10px;
-      //   box-sizing: border-box;
-      //   display: block;
-      //   width: 100px;
-      //   text-justify: center;
-      //   color: #fff !important;
-      //   background-color: var(--tertiary);
-      
-      // }
       
       .custom-gated-topic-content {
         text-align: center;
