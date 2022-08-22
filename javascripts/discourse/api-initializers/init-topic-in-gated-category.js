@@ -11,7 +11,7 @@ export default apiInitializer("0.8", (api) => {
     window.addEventListener("resize", () => {
       if (document.querySelector(".topic-in-gated-category"))
       document.querySelector(".fancy-title").scrollIntoView();
-      window.scrollBy(0, -60);
+      scrollBy(0, -60);
     })
   }
   api.onPageChange(() => {
