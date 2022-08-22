@@ -5,8 +5,15 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
-      // document.querySelector("#main-outlet").scrollIntoView();
-      // scrollBy(0, 100);
+      let element = document.getElementById('#main-outlet');
+      let headerOffset = 100;
+    let elementPosition = element.getBoundingClientRect().top;
+    let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
     })
   }
   api.onPageChange(() => {
