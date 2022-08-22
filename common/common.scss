@@ -1,92 +1,108 @@
-.custom-gated-topic-container {
-  background: var(--tertiary-low);
-  border-top: 5px solid var(--tertiary);
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  min-height: 40%;
-}
-
-// .gate-subscribe-for-member{
-//   display: block;
-//   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-//   border-radius: 4px !important;
-//   font-weight: 700;
-//   margin-left: 7px;
-//   padding: 6px 10px;
-//   box-sizing: border-box;
-//   display: block;
-//   width: 100px;
-//   text-justify: center;
-//   color: #fff !important;
-//   background-color: var(--tertiary);
-
-// }
-
-.custom-gated-topic-content {
-  text-align: center;
-  margin: 10vh auto 0;
-  padding: 1rem;
-
-  &--header {
-    font-size: var(--font-up-5);
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  &--text {
-    font-size: var(--font-up-2);
-  }
-
-  &--cta {
-    margin-top: 2rem;
-
-    &__signup {
-      margin-bottom: 1rem;
-    }
-
-    &__login {
-      #cta-login-link {
-        background: transparent;
-        color: var(--primary-high);
+.with-gated-categories {
+  .row {
+    .topic-body {
+      &:not(:first-child) {
+        display: none;
+      }
+      .cooked:first-child {
+        overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
       }
     }
   }
-}
-
-.topic-in-gated-category {
-  overflow-y: hidden;
-  height: 100%;
-
-  .topic-navigation {
-    visibility: hidden;
-  }
-
-  .post-stream {
-    max-height: 150vh;
-    overflow: hidden;
-  }
-
-  .container.posts::before {
-    // ensure to cover most of the content when zoomed out
-    content: "";
-    position: absolute;
+  .custom-gated-topic-container {
+    background: var(--tertiary-low);
+    border-top: 5px solid var(--tertiary);
+    position: fixed;
+    width: 100%;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 90%;
-    z-index: 50;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 1) 60%,
-      rgba(255, 255, 255, 1) 70%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    z-index: 999;
+    min-height: 40%;
   }
+  
+  // .gate-subscribe-for-member{
+  //   display: block;
+  //   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  //   border-radius: 4px !important;
+  //   font-weight: 700;
+  //   margin-left: 7px;
+  //   padding: 6px 10px;
+  //   box-sizing: border-box;
+  //   display: block;
+  //   width: 100px;
+  //   text-justify: center;
+  //   color: #fff !important;
+  //   background-color: var(--tertiary);
+  
+  // }
+  
+  .custom-gated-topic-content {
+    text-align: center;
+    margin: 10vh auto 0;
+    padding: 1rem;
+  
+    &--header {
+      font-size: var(--font-up-5);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  
+    &--text {
+      font-size: var(--font-up-2);
+    }
+  
+    &--cta {
+      margin-top: 2rem;
+  
+      &__signup {
+        margin-bottom: 1rem;
+      }
+  
+      &__login {
+        #cta-login-link {
+          background: transparent;
+          color: var(--primary-high);
+        }
+      }
+    }
+  }
+  
+  .topic-in-gated-category {
+    overflow-y: hidden;
+    height: 100%;
+  
+    .topic-navigation {
+      visibility: hidden;
+    }
+  
+    .post-stream {
+      max-height: 150vh;
+      overflow: hidden;
+    }
+  
+    .container.posts::before {
+      // ensure to cover most of the content when zoomed out
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 90%;
+      z-index: 50;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 60%,
+        rgba(255, 255, 255, 1) 70%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+  
 }
