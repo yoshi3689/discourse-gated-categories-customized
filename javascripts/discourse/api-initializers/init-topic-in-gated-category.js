@@ -5,7 +5,7 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
-      let element = document.querySelector('.announcement');
+      let element = document.querySelector('.join-conversation-container');
       element.scrollIntoView({block: "end"});
       // window.scrollBy(0, -100);
       // let styleSheet = document.createElement("style");
