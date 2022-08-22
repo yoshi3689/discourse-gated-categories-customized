@@ -36,9 +36,20 @@
 
   .with-gated-category {
     .container.posts {
-      // .row:not(:nth-child(4)) .topic-body {
-      //   display: none;
-      // }
+      .row {
+        // display: none;
+        .post-stream {
+          &::before {
+            content: "";
+          width: 100%;
+          height: calc(100% - 45px);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: #fff;
+          }
+        }
+      }
     }
       .custom-gated-topic-container {
         background: var(--tertiary-low);
