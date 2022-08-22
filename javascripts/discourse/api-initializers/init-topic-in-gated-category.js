@@ -6,7 +6,7 @@ export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#main-outlet").scrollIntoView();
-      // scrollBy(0, 100);
+      scrollBy(0, 100);
     })
     window.addEventListener("resize", () => {
       if (document.querySelector(".topic-in-gated-category"))
