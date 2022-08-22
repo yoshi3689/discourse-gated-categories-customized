@@ -7,7 +7,7 @@ export default apiInitializer("0.8", (api) => {
     document.addEventListener("DOMContentLoaded", () => {
       let element = document.querySelector('#main-outlet');
       element.scrollIntoView();
-    
+      element.scrollBy(0, 64);
     })
   }
   api.onPageChange(() => {
