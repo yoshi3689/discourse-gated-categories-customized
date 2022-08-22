@@ -7,9 +7,10 @@ export default apiInitializer("0.8", (api) => {
     document.addEventListener("DOMContentLoaded", () => {
       let element = document.querySelector('#main-outlet');
       element.scrollIntoView();
-      element.scrollBy(0, 64);
+      window.scrollBy(0, 64);
       let styleSheet = document.createElement("style");
       styleSheet.innerHTML = ".topic-in-gated-category {overflow-y: hidden; }"
+
     })
   }
   api.onPageChange(() => {
