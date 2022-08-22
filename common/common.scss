@@ -41,12 +41,12 @@
       &:not(:first-child) {
         display: none;
       }
-      .cooked:first-child {
-        overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      }
+      // .cooked:first-child {
+      //   overflow: hidden;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 1;
+      // -webkit-box-orient: vertical;
+      // }
     }
   }
   .custom-gated-topic-container {
