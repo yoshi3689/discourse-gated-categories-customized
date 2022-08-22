@@ -3,6 +3,11 @@ import {
 } from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
+  if (window.location.pathname.includes('/t/')) {
+    window.addEventListener("resize", () => {
+      document.querySelector(".fancy-title").scrollIntoView();
+    })
+  }
   api.onPageChange(() => {
     if (window.location.pathname.includes('/t/')) {
       document.querySelector("#main-outlet").classList.add("with-gated-category");
