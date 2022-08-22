@@ -4,6 +4,9 @@ import {
 
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector("#topic-title").scrollIntoView();
+    })
     window.addEventListener("resize", () => {
       document.querySelector("#topic-title").scrollIntoView();
     })
