@@ -5,7 +5,7 @@ import {
 export default apiInitializer("0.8", (api) => {
   api.onPageChange(() => {
     if (window.location.pathname.includes('/t/')) {
-      document.querySelector(".fancy-title").scrollIntoView();
+      document.querySelector("#main-outlet").classList.add("with-gated-category");
     }
   })
 })
