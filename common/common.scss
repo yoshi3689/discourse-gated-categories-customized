@@ -2,6 +2,7 @@
   
   .topic-in-gated-category {
     height: 100%;
+    overflow-y: hidden;
     .topic-navigation {
       visibility: hidden;
     }

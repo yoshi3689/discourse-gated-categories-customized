@@ -5,9 +5,9 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
-      let element = document.querySelector('#main-outlet');
-      element.scrollIntoView();
-      element.scrollBy(0, -100);
+      let element = document.querySelector('.announcement');
+      element.scrollIntoView({block: "end"});
+      // window.scrollBy(0, -100);
       // let styleSheet = document.createElement("style");
       // styleSheet.innerHTML = ".topic-in-gated-category { }"
       // document.body.appendChild(styleSheet);
