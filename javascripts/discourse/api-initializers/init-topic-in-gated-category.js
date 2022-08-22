@@ -4,12 +4,12 @@ import {
 
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
-    document.addEventListener("DOMContentLoaded", () => {
-      let elementArray = document.querySelectorAll('.below-site-header-outlet');
+    let elementArray;
+    document.addEventListener("load", () => {
+      elementArray = document.querySelectorAll('.below-site-header-outlet');
       elementArray[elementArray.length - 1].scrollIntoView();
     })
     window.addEventListener("resize", () => {
-      let elementArray = document.querySelectorAll('.below-site-header-outlet');
       elementArray[elementArray.length - 1].scrollIntoView();
     })
   }
