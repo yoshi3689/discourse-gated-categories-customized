@@ -5,8 +5,8 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
-      let element = document.querySelector('.below-site-header-outlet');
-      element.scrollIntoView();
+      let elementArray = document.querySelectorAll('.below-site-header-outlet');
+      elementArray[elementArray.length - 1].scrollIntoView();
       // window.scrollBy(0, -100);
       // let styleSheet = document.createElement("style");
       // styleSheet.innerHTML = ".topic-in-gated-category { }"
