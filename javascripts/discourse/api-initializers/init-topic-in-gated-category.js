@@ -5,8 +5,8 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
-      let element = document.querySelector('.join-conversation-container');
-      element.scrollIntoView();
+      let element = document.querySelector('.cta-section-connector');
+      element.scrollIntoView({block:"end"});
       // window.scrollBy(0, -100);
       // let styleSheet = document.createElement("style");
       // styleSheet.innerHTML = ".topic-in-gated-category { }"
