@@ -36,18 +36,8 @@
 
   .with-gated-category {
 
-  .row {
-    .topic-body {
-      &:not(:first-child) {
-        display: none;
-      }
-      // .cooked:first-child {
-      //   overflow: hidden;
-      // display: -webkit-box;
-      // -webkit-line-clamp: 1;
-      // -webkit-box-orient: vertical;
-      // }
-    }
+  .row:not(:first-child) .topic-body {
+    display: none;
   }
   .custom-gated-topic-container {
     background: var(--tertiary-low);
