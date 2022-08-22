@@ -6,12 +6,12 @@ export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".fancy-title").scrollIntoView();
-      window.scrollBy(0, 60);
+      window.scrollBy(0, -60);
     })
     window.addEventListener("resize", () => {
       if (document.querySelector(".topic-in-gated-category"))
       document.querySelector(".fancy-title").scrollIntoView();
-      window.scrollBy(0, 60);
+      window.scrollBy(0, -60);
     })
   }
   api.onPageChange(() => {
