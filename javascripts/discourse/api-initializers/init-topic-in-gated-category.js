@@ -5,7 +5,7 @@ import {
 export default apiInitializer("0.8", (api) => {
   if (window.location.pathname.includes('/t/')) {
     window.addEventListener("resize", () => {
-      document.querySelector(".fancy-title").scrollIntoView();
+      document.querySelector("#topic-title").scrollIntoView();
     })
   }
   api.onPageChange(() => {
